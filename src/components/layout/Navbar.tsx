@@ -7,9 +7,11 @@ import styles from "./Navbar.module.css";
 
 const navLinks = [
   { href: "/", label: "Trang Chủ" },
-  { href: "/destinations", label: "Điểm Đến" },
-  { href: "/journeys", label: "Hành Trình" },
-  { href: "/map", label: "Bản Đồ" },
+  { href: "/about", label: "Giới Thiệu" },
+  { href: "/projects", label: "Dự Án" },
+  { href: "/services", label: "Dịch Vụ" },
+  { href: "/careers", label: "Tuyển Dụng" },
+  { href: "/contact", label: "Liên Hệ" },
 ];
 
 export default function Navbar() {
@@ -29,7 +31,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className={styles.logo}>
           <Compass size={20} strokeWidth={1.5} />
-          <span>PhượtXuyênViệt</span>
+          <span>Techvina</span>
         </Link>
 
         {/* Desktop nav */}
@@ -47,8 +49,8 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className={styles.actions}>
-          <Link href="/journeys" className="btn btn-primary" style={{ fontSize: "0.8rem", padding: "9px 18px" }}>
-            Chia sẻ hành trình
+          <Link href="/contact" className="btn btn-primary" style={{ fontSize: "0.8rem", padding: "9px 18px" }}>
+            Nhận Báo Giá
           </Link>
           <button
             className={styles.menuBtn}

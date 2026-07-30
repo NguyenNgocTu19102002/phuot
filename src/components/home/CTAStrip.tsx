@@ -5,26 +5,26 @@ import styles from "./CTAStrip.module.css";
 export default function CTAStrip() {
   return (
     <section className={styles.strip}>
-      <div className="topo-pattern" style={{ opacity: 0.08 }} />
+      <div className="tech-pattern" style={{ opacity: 0.15 }} />
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.text}>
-            <span className="text-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.12em", color: "var(--bg-base)", opacity: 0.6 }}>
-              — CỘNG ĐỒNG PHƯỢT THỦ VIỆT NAM —
+            <span className="text-mono" style={{ fontSize: "0.7rem", letterSpacing: "0.12em", color: "var(--bg-base)", opacity: 0.8 }}>
+              — SẴN SÀNG HỢP TÁC —
             </span>
             <h2 className={styles.heading}>
-              Bạn vừa hoàn thành<br />một hành trình?
+              Bạn cần một đối tác<br />gia công PCBA uy tín?
             </h2>
             <p className={styles.sub}>
-              Chia sẻ câu chuyện của bạn với hàng nghìn phượt thủ Việt Nam.
+              Với tiêu chuẩn khắt khe và công nghệ hiện đại, chúng tôi tự tin đáp ứng mọi yêu cầu khắt khe nhất của bạn.
             </p>
           </div>
           <div className={styles.actions}>
-            <Link href="/journeys" className={styles.btn}>
-              Chia sẻ ngay <ArrowRight size={18} />
+            <Link href="/contact" className={styles.btn}>
+              Nhận Báo Giá <ArrowRight size={18} />
             </Link>
-            <Link href="/map" className={styles.btnOutline}>
-              Xem bản đồ
+            <Link href="/about" className={styles.btnOutline}>
+              Về Chúng Tôi
             </Link>
           </div>
         </div>

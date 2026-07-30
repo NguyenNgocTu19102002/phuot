@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./StatsSection.module.css";
 
 const stats = [
-  { value: 63, suffix: "", label: "Tỉnh thành", unit: "TỈNH", color: "var(--accent-lime)" },
-  { value: 28450, suffix: "", label: "Tổng km đã ghi nhận", unit: "KM", color: "var(--accent-orange)" },
-  { value: 1200, suffix: "+", label: "Hành trình đã chia sẻ", unit: "HÀNH TRÌNH", color: "var(--accent-teal)" },
-  { value: 500, suffix: "+", label: "Địa điểm phượt", unit: "ĐIỂM ĐẾN", color: "var(--accent-purple)" },
+  { value: 15, suffix: "+", label: "Năm kinh nghiệm", unit: "KINH NGHIỆM", color: "var(--accent-primary)" },
+  { value: 850, suffix: "+", label: "Nhân sự chuyên môn cao", unit: "NHÂN SỰ", color: "var(--accent-orange)" },
+  { value: 120, suffix: "+", label: "Khách hàng & Đối tác", unit: "ĐỐI TÁC", color: "var(--accent-teal)" },
+  { value: 25000, suffix: "", label: "Mét vuông diện tích nhà máy", unit: "QUY MÔ NHÀ MÁY", color: "var(--accent-purple)" },
 ];
 
 function CountUp({ target, suffix, color }: { target: number; suffix: string; color: string }) {

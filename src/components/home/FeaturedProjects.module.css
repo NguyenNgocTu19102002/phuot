@@ -1,0 +1,132 @@
+.section {}
+
+.expandingGrid {
+  display: flex;
+  width: 100%;
+  height: 580px;
+  gap: 16px;
+}
+
+.expandingCard {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  display: block;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.expandingCard:hover {
+  flex: 3.5;
+}
+
+.expandingGrid:hover .expandingCard:not(:hover) {
+  filter: brightness(0.6) saturate(0.8);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.expandingCard:hover .img {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  transition: background 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.expandingCard:hover .cardOverlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: rgba(240, 237, 230, 0.7);
+  margin-bottom: 12px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, max-height 0.6s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.cardStats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.6s ease, max-height 0.6s ease;
+}
+
+.expandingCard:hover .cardTitle {
+  white-space: normal;
+}
+
+.expandingCard:hover .cardDesc {
+  opacity: 1;
+  max-height: 100px;
+}
+
+.expandingCard:hover .cardStats {
+  opacity: 1;
+  max-height: 50px;
+}
+
+@media (max-width: 900px) {
+  .expandingGrid {
+    flex-direction: column;
+    height: 800px;
+  }
+  .expandingCard {
+    flex: 1;
+  }
+  .expandingCard:hover {
+    flex: 2;
+  }
+}

@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { Compass, Tv2, Camera, Share2, MapPin } from "lucide-react";
 import styles from "./Footer.module.css";
+import { company } from "@/data/company";
 
 const footerLinks = {
   explore: [
-    { href: "/destinations", label: "Điểm đến" },
-    { href: "/journeys", label: "Hành trình" },
-    { href: "/map", label: "Bản đồ" },
+    { href: "/about", label: "Giới thiệu" },
+    { href: "/projects", label: "Dự án tiêu biểu" },
+    { href: "/services", label: "Dịch vụ sản xuất" },
+    { href: "/careers", label: "Tuyển dụng & Phúc lợi" },
   ],
-  regions: [
-    { href: "/destinations?region=tay-bac", label: "Tây Bắc" },
-    { href: "/destinations?region=dong-bac", label: "Đông Bắc" },
-    { href: "/destinations?region=mien-trung", label: "Miền Trung" },
-    { href: "/destinations?region=tay-nguyen", label: "Tây Nguyên" },
-    { href: "/destinations?region=nam-bo", label: "Nam Bộ" },
+  capabilities: [
+    { href: "/services", label: "Gia công SMT" },
+    { href: "/services", label: "Lắp ráp PCBA" },
+    { href: "/services", label: "Box Build" },
+    { href: "/services", label: "Kiểm tra chất lượng (AOI)" },
   ],
 };
 
@@ -25,12 +26,11 @@ export default function Footer() {
           <div className={styles.topBarInner}>
             <span className="text-mono" style={{ color: "var(--text-muted)" }}>
               <MapPin size={12} style={{ display: "inline", marginRight: 6 }} />
-              Việt Nam — từ Lũng Cú đến Cà Mau
+              {company.address}
             </span>
             <div className={styles.socials}>
-              <a href="#" aria-label="Instagram"><Camera size={16} /></a>
+              <a href="#" aria-label="LinkedIn"><Share2 size={16} /></a>
               <a href="#" aria-label="Youtube"><Tv2 size={16} /></a>
-              <a href="#" aria-label="Facebook"><Share2 size={16} /></a>
             </div>
           </div>
         </div>
@@ -42,61 +42,60 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logo}>
               <Compass size={22} strokeWidth={1.5} />
-              <span>PhượtXuyênViệt</span>
+              <span>Techvina Electronics</span>
             </div>
             <p className={styles.tagline}>
-              Nền tảng thông tin du lịch phượt thủ Việt Nam.
-              Chia sẻ hành trình, khám phá điểm đến mới.
+              {company.description}
             </p>
             <div className={styles.stats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>500+</span>
-                <span className={styles.statLabel}>Địa điểm</span>
+                <span className={styles.statNum}>{company.founded}</span>
+                <span className={styles.statLabel}>Năm thành lập</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNum}>1,200+</span>
-                <span className={styles.statLabel}>Hành trình</span>
+                <span className={styles.statNum}>{company.employees}+</span>
+                <span className={styles.statLabel}>Nhân sự</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNum}>28,000</span>
-                <span className={styles.statLabel}>Km tổng</span>
+                <span className={styles.statNum}>{company.area} m²</span>
+                <span className={styles.statLabel}>Quy mô nhà máy</span>
               </div>
             </div>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className={styles.colTitle}>Khám phá</h4>
+            <h4 className={styles.colTitle}>Công ty</h4>
             <ul className={styles.linkList}>
-              {footerLinks.explore.map((l) => (
-                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              {footerLinks.explore.map((l, i) => (
+                <li key={i}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className={styles.colTitle}>Vùng miền</h4>
+            <h4 className={styles.colTitle}>Năng lực</h4>
             <ul className={styles.linkList}>
-              {footerLinks.regions.map((l) => (
-                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              {footerLinks.capabilities.map((l, i) => (
+                <li key={i}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 className={styles.colTitle}>Cập nhật hành trình</h4>
+            <h4 className={styles.colTitle}>Liên hệ báo giá</h4>
             <p className={styles.newsletterDesc}>
-              Nhận thông báo khi có hành trình mới và địa điểm hot.
+              Để lại email để nhận được hồ sơ năng lực (Profile) và báo giá gia công.
             </p>
             <div className={styles.newsletterForm}>
               <input
                 type="email"
-                placeholder="email@phuotxuyenviet.vn"
+                placeholder={company.email}
                 className={styles.input}
               />
               <button className="btn btn-primary" style={{ padding: "10px 16px", fontSize: "0.8rem" }}>
-                Đăng ký
+                Gửi
               </button>
             </div>
           </div>
@@ -104,10 +103,10 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © 2025 PhượtXuyênViệt — Được tạo ra với ❤️ bởi cộng đồng phượt thủ Việt Nam
+            © {new Date().getFullYear()} Techvina Electronics Co., Ltd. Đã đăng ký bản quyền.
           </p>
-          <p className={styles.motto} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
-            "ĐƯỜNG ĐI KHÓ, KHÔNG KHÓ VÌ NGĂN SÔNG CẤM NÚI"
+          <p className={styles.motto} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+            {company.slogan}
           </p>
         </div>
       </div>

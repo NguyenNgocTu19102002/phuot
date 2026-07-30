@@ -1,7 +1,7 @@
 import Hero from "@/components/home/Hero";
 import StatsSection from "@/components/home/StatsSection";
-import FeaturedDestinations from "@/components/home/FeaturedDestinations";
-import JourneyGrid from "@/components/home/JourneyGrid";
+import FeaturedProjects from "@/components/home/FeaturedProjects";
+import Capabilities from "@/components/home/Capabilities";
 import CTAStrip from "@/components/home/CTAStrip";
 
 export default function HomePage() {
@@ -9,8 +9,8 @@ export default function HomePage() {
     <>
       <Hero />
       <StatsSection />
-      <FeaturedDestinations />
-      <JourneyGrid />
+      <FeaturedProjects />
+      <Capabilities />
       <CTAStrip />
     </>
   );

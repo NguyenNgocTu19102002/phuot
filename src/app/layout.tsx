@@ -4,12 +4,12 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "PhượtXuyênViệt — Khám Phá Việt Nam Theo Cách Của Bạn",
-  description: "Nền tảng thông tin du lịch phượt thủ Việt Nam. Khám phá hàng trăm địa điểm, nhật ký hành trình và bản đồ tương tác.",
-  keywords: "phượt, du lịch Việt Nam, nhật ký phượt, địa điểm du lịch, hành trình xe máy",
+  title: "Techvina Electronics — Gia Công Điện Tử & Lắp Ráp PCBA",
+  description: "Nhà máy sản xuất linh kiện điện tử chuyên nghiệp tại KCN Quang Minh, Mê Linh, Hà Nội. Giải pháp gia công SMT, Box Build hàng đầu.",
+  keywords: "sản xuất điện tử, gia công SMT, PCBA, KCN Quang Minh, Mê Linh, Techvina",
   openGraph: {
-    title: "PhượtXuyênViệt — Khám Phá Việt Nam",
-    description: "Nền tảng thông tin du lịch phượt thủ Việt Nam",
+    title: "Techvina Electronics — Đối tác sản xuất điện tử",
+    description: "Nhà máy sản xuất linh kiện điện tử tại KCN Quang Minh",
     type: "website",
   },
 };
