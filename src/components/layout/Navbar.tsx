@@ -1,80 +1,96 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Compass } from "lucide-react";
-import styles from "./Navbar.module.css";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { company } from "@/data/company";
 
 const navLinks = [
   { href: "/", label: "Trang Chủ" },
   { href: "/about", label: "Giới Thiệu" },
-  { href: "/projects", label: "Dự Án" },
-  { href: "/services", label: "Dịch Vụ" },
-  { href: "/careers", label: "Tuyển Dụng" },
+  { href: "/services", label: "Dịch Vụ In Ấn" },
+  { href: "/products", label: "Thiết Bị & Vật Tư" },
+  { href: "/articles", label: "Tin Tức" },
   { href: "/contact", label: "Liên Hệ" },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.inner}>
-        {/* Logo */}
-        <Link href="/" className={styles.logo}>
-          <Compass size={20} strokeWidth={1.5} />
-          <span>Techvina</span>
-        </Link>
-
-        {/* Desktop nav */}
-        <nav className={styles.nav}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.navLink} ${pathname === link.href ? styles.active : ""}`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* CTA */}
-        <div className={styles.actions}>
-          <Link href="/contact" className="btn btn-primary" style={{ fontSize: "0.8rem", padding: "9px 18px" }}>
-            Nhận Báo Giá
-          </Link>
-          <button
-            className={styles.menuBtn}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+    <header className="w-full shadow-sm bg-white sticky top-0 z-50">
+      {/* Top Bar */}
+      <div className="bg-[var(--color-primary)] text-white text-sm hidden md:block py-2">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex justify-between items-center">
+          <div className="flex space-x-6">
+            <span className="flex items-center gap-2"><Phone size={14} /> {company.phone}</span>
+            <span className="flex items-center gap-2"><Mail size={14} /> {company.email}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin size={14} /> KCN Quang Minh, Mê Linh, Hà Nội
+          </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.mobileLink} ${pathname === link.href ? styles.activeLink : ""}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
+      {/* Main Navbar */}
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-[var(--color-primary)] rounded flex items-center justify-center text-white font-bold text-xl">
+              QM
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">Quang Minh</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-widest leading-none mt-1">Print & Pack</span>
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-semibold text-[15px] uppercase tracking-wide transition-colors hover:text-[var(--color-primary)] ${
+                  pathname === link.href ? "text-[var(--color-primary)]" : "text-gray-700"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            <Link href="/contact" className="hidden lg:inline-flex bg-[var(--color-primary)] text-white px-6 py-2.5 rounded hover:bg-[var(--color-primary-hover)] transition-colors font-bold text-sm uppercase">
+              Nhận Báo Giá
             </Link>
-          ))}
+            <button className="md:hidden text-gray-700" onClick={() => setMenuOpen(!menuOpen)}>
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Nav */}
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+          <div className="flex flex-col px-4 py-4 space-y-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-4 py-3 rounded font-semibold uppercase ${
+                  pathname === link.href ? "bg-blue-50 text-[var(--color-primary)]" : "text-gray-700"
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </header>

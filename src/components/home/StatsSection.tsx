@@ -1,72 +1,24 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import styles from "./StatsSection.module.css";
+import { Users, FileText, Award, Calendar } from "lucide-react";
 
 const stats = [
-  { value: 15, suffix: "+", label: "Năm kinh nghiệm", unit: "KINH NGHIỆM", color: "var(--accent-primary)" },
-  { value: 850, suffix: "+", label: "Nhân sự chuyên môn cao", unit: "NHÂN SỰ", color: "var(--accent-orange)" },
-  { value: 120, suffix: "+", label: "Khách hàng & Đối tác", unit: "ĐỐI TÁC", color: "var(--accent-teal)" },
-  { value: 25000, suffix: "", label: "Mét vuông diện tích nhà máy", unit: "QUY MÔ NHÀ MÁY", color: "var(--accent-purple)" },
+  { icon: <Users size={48} className="text-[var(--color-primary)]" />, count: "3,500+", label: "Khách hàng" },
+  { icon: <FileText size={48} className="text-[var(--color-primary)]" />, count: "1,200+", label: "Dự án bao bì" },
+  { icon: <Award size={48} className="text-[var(--color-primary)]" />, count: "40+", label: "Giải thưởng" },
+  { icon: <Calendar size={48} className="text-[var(--color-primary)]" />, count: "24", label: "Năm kinh nghiệm" }
 ];
-
-function CountUp({ target, suffix, color }: { target: number; suffix: string; color: string }) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started) {
-          setStarted(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 2000;
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [started, target]);
-
-  return (
-    <span ref={ref} style={{ color }}>
-      {count.toLocaleString("vi-VN")}{suffix}
-    </span>
-  );
-}
 
 export default function StatsSection() {
   return (
-    <section className={styles.section}>
-      <div className="container">
-        <div className={styles.grid}>
-          {stats.map((stat, i) => (
-            <div key={i} className={styles.statCard}>
-              <div className={styles.unit} style={{ color: stat.color }}>
-                {stat.unit}
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 group">
+              <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                {stat.icon}
               </div>
-              <div className={styles.value}>
-                <CountUp target={stat.value} suffix={stat.suffix} color={stat.color} />
-              </div>
-              <div className={styles.label}>{stat.label}</div>
-              <div className={styles.bar} style={{ background: stat.color }} />
+              <div className="text-5xl font-bold text-[var(--color-text-main)] mb-3 font-saira">{stat.count}</div>
+              <div className="text-lg font-bold text-[var(--color-text-muted)]">{stat.label}</div>
             </div>
           ))}
         </div>

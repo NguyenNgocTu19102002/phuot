@@ -1,20 +1,47 @@
 export const company = {
-  name: "Techvina Electronics Co., Ltd",
-  slogan: "Precision Manufacturing for the Future",
-  founded: 2010,
-  employees: 850,
-  area: "25,000",
-  address: "Lô 3B, Khu Công Nghiệp Quang Minh, Thị trấn Chi Đông, Huyện Mê Linh, Hà Nội",
-  phone: "+84 24 3818 0000",
-  email: "contact@techvina.vn",
-  description: "Chúng tôi là nhà sản xuất linh kiện điện tử và lắp ráp bảng mạch in (PCBA) hàng đầu tại miền Bắc Việt Nam, đối tác tin cậy của các tập đoàn công nghệ toàn cầu.",
-  capabilities: [
-    "Công nghệ Dán bề mặt (SMT) tốc độ cao",
-    "Gia công bo mạch điện tử (PCBA)",
-    "Kiểm tra quang học tự động (AOI & X-Ray)",
-    "Phòng sạch Class 10,000",
-    "Lắp ráp hoàn thiện sản phẩm (Box Build)",
-    "Quản lý chuỗi cung ứng linh kiện"
+  name: "Công ty TNHH Bao Bì & In Ấn Quang Minh",
+  shortName: "Quang Minh Print & Pack",
+  slogan: "Chất Lượng In Ấn Chuẩn Quốc Tế G7",
+  description:
+    "Quang Minh Print & Pack là nhà máy chuyên cung cấp các giải pháp in ấn và sản xuất bao bì giấy cao cấp. Sở hữu dây chuyền hiện đại tại KCN Quang Minh và áp dụng nghiêm ngặt các tiêu chuẩn quản trị màu sắc quốc tế như G7, Fogra, chúng tôi cam kết mang đến sự đồng nhất và hoàn hảo trên từng sản phẩm.",
+  address: "Lô 12, Khu Công nghiệp Quang Minh, Thị trấn Quang Minh, Huyện Mê Linh, TP. Hà Nội",
+  phone: "024 3818 6666",
+  email: "contact@quangminhpack.vn",
+  social: {
+    facebook: "https://facebook.com/quangminhpack",
+    linkedin: "https://linkedin.com/company/quangminhpack",
+    youtube: "https://youtube.com/quangminhpack"
+  },
+  stats: [
+    { label: "Năm Thành Lập", value: "2010" },
+    { label: "Chứng Nhận G7 Master", value: "2020" },
+    { label: "Nhân Sự Chuyên Môn", value: "350+" },
+    { label: "Đối Tác Toàn Cầu", value: "500+" }
   ],
-  certifications: ["ISO 9001:2015", "ISO 14001:2015", "ISO 13485 (Y tế)", "IATF 16949 (Ô tô)"]
+  services: [
+    {
+      id: "s1",
+      title: "Sản Xuất Bao Bì Giấy Cao Cấp",
+      desc: "Thiết kế và in ấn các loại hộp cứng, hộp carton sóng, túi giấy cao cấp phục vụ cho các ngành mỹ phẩm, dược phẩm, thực phẩm và điện tử.",
+      icon: "Award"
+    },
+    {
+      id: "s2",
+      title: "In Offset Công Nghiệp",
+      desc: "Hệ thống máy in Offset công nghệ cao đáp ứng các đơn hàng số lượng lớn với độ chính xác màu tuyệt đối, tuân thủ tiêu chuẩn ISO 12647.",
+      icon: "Settings"
+    },
+    {
+      id: "s3",
+      title: "Quản Trị Màu Sắc Chuyên Nghiệp",
+      desc: "Ứng dụng phương pháp G7 để kiểm soát cân bằng xám và phục chế tầng thứ (NPDC), đảm bảo sự đồng nhất thị giác trên mọi vật liệu.",
+      icon: "Palette"
+    },
+    {
+      id: "s4",
+      title: "In Tem Nhãn, Decal",
+      desc: "In ấn tem nhãn cuộn, decal bế khuôn chất lượng cao, phục vụ đóng gói và truy xuất nguồn gốc sản phẩm an toàn.",
+      icon: "BookOpen"
+    }
+  ]
 };

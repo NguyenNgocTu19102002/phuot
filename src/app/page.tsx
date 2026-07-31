@@ -1,17 +1,25 @@
 import Hero from "@/components/home/Hero";
+import Services from "@/components/home/Services";
+import ProductsSection from "@/components/home/ProductsSection";
 import StatsSection from "@/components/home/StatsSection";
-import FeaturedProjects from "@/components/home/FeaturedProjects";
-import Capabilities from "@/components/home/Capabilities";
-import CTAStrip from "@/components/home/CTAStrip";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import NewsletterCTA from "@/components/home/NewsletterCTA";
+import ProcessSection from "@/components/home/ProcessSection";
+import ContactSection from "@/components/home/ContactSection";
+import LatestArticles from "@/components/home/LatestArticles";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
+    <main className="flex min-h-screen flex-col bg-white">
       <Hero />
+      <Services />
+      <ProductsSection />
       <StatsSection />
-      <FeaturedProjects />
-      <Capabilities />
-      <CTAStrip />
-    </>
+      <WhyChooseUs />
+      <NewsletterCTA />
+      <ProcessSection />
+      <ContactSection />
+      <LatestArticles />
+    </main>
   );
 }

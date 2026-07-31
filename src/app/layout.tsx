@@ -4,12 +4,12 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Techvina Electronics — Gia Công Điện Tử & Lắp Ráp PCBA",
-  description: "Nhà máy sản xuất linh kiện điện tử chuyên nghiệp tại KCN Quang Minh, Mê Linh, Hà Nội. Giải pháp gia công SMT, Box Build hàng đầu.",
-  keywords: "sản xuất điện tử, gia công SMT, PCBA, KCN Quang Minh, Mê Linh, Techvina",
+  title: "Quang Minh Print & Pack — Nhà máy In Ấn & Bao Bì",
+  description: "Công ty sản xuất bao bì giấy, in offset cao cấp tại KCN Quang Minh, Mê Linh, Hà Nội. Ứng dụng quản trị màu sắc tiêu chuẩn G7.",
+  keywords: "in ấn, bao bì, hộp cứng, tem nhãn, G7 Master, KCN Quang Minh, Mê Linh, Quang Minh Print",
   openGraph: {
-    title: "Techvina Electronics — Đối tác sản xuất điện tử",
-    description: "Nhà máy sản xuất linh kiện điện tử tại KCN Quang Minh",
+    title: "Quang Minh Print & Pack",
+    description: "Nhà máy sản xuất bao bì giấy tại KCN Quang Minh",
     type: "website",
   },
 };
