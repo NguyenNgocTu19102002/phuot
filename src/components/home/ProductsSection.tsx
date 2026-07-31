@@ -1,30 +1,34 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 const products = [
   {
     title: "Máy In Offset 4/6 Màu",
     description: "Nhập khẩu Đức & Nhật bản nguyên chiếc. Độ chính xác chồng màu tuyệt đối, tối ưu cho in tem nhãn và bao bì cao cấp.",
-    image: "https://images.unsplash.com/photo-1598425237654-4fb95c25a072?q=80&w=800&auto=format&fit=crop"
+    image: "/images/heidelberg.jpg"
   },
   {
     title: "Máy Gia Công Sau In",
     description: "Máy bế hộp tự động, máy cán màng nhiệt, máy ép nhũ, máy dán hộp tự động tốc độ cao giúp tăng năng suất vượt trội.",
-    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop"
+    image: "/images/bobst.jpg"
   },
   {
     title: "Vật Tư & Hóa Chất Ngành In",
     description: "Phân phối mực in offset cao cấp, kẽm in CTP, dung dịch nước máng và các loại hóa chất phụ trợ đạt chuẩn bảo vệ môi trường.",
-    image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=800&auto=format&fit=crop"
+    image: "/images/ink.jpg"
   },
   {
     title: "Giấy & Nguyên Liệu In",
     description: "Cung cấp sỉ lẻ giấy Ivory, Couche, Bristol, Duplex, Kraft... đầy đủ định lượng, cắt bế theo kích thước yêu cầu của xưởng in.",
-    image: "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=800&auto=format&fit=crop"
+    image: "/images/paper_rolls.jpg"
   }
 ];
 
 export default function ProductsSection() {
+  const { addToCart } = useCart();
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
@@ -53,9 +57,25 @@ export default function ProductsSection() {
                 <p className="text-[var(--color-text-muted)] mb-6 flex-grow leading-relaxed">
                   {product.description}
                 </p>
-                <Link href="/contact" className="inline-flex items-center gap-2 text-sm text-[var(--color-primary)] font-bold uppercase tracking-wide group-hover:gap-4 transition-all mt-auto">
-                  Nhận báo giá <ArrowRight size={16} />
-                </Link>
+                <div className="mt-auto flex gap-2">
+                  <button 
+                    onClick={() => {
+                      addToCart({
+                        id: `home-prod-${index}`,
+                        name: product.title,
+                        image: product.image,
+                        category: "Vật tư & Thiết bị",
+                      });
+                      alert(`Đã thêm ${product.title} vào giỏ hàng!`);
+                    }}
+                    className="flex-1 inline-flex items-center justify-center text-[13px] bg-[var(--color-primary)] text-white font-bold uppercase tracking-wide transition-all py-2.5 rounded hover:bg-[var(--color-primary-hover)]"
+                  >
+                    Vào giỏ
+                  </button>
+                  <Link href="/products" className="flex-1 inline-flex items-center justify-center gap-1 text-[13px] text-[var(--color-primary)] bg-gray-100 font-bold uppercase tracking-wide transition-all py-2.5 rounded hover:bg-gray-200">
+                    Xem <ArrowRight size={14} />
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

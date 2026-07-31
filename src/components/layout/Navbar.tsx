@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, ShoppingCart } from "lucide-react";
 import { company } from "@/data/company";
+import { useCart } from "@/context/CartContext";
 
 const navLinks = [
   { href: "/", label: "Trang Chủ" },
@@ -18,6 +19,7 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { cartCount } = useCart();
 
   return (
     <header className="w-full shadow-sm bg-white sticky top-0 z-50">
@@ -63,7 +65,16 @@ export default function Navbar() {
           </nav>
 
           {/* CTA & Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
+            <Link href="/cart" className="relative text-gray-700 hover:text-[var(--color-primary)] transition-colors">
+              <ShoppingCart size={24} />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#ff5e14] text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+            
             <Link href="/contact" className="hidden lg:inline-flex bg-[var(--color-primary)] text-white px-6 py-2.5 rounded hover:bg-[var(--color-primary-hover)] transition-colors font-bold text-sm uppercase">
               Nhận Báo Giá
             </Link>

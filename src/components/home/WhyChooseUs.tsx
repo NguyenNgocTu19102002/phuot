@@ -6,7 +6,7 @@ export default function WhyChooseUs() {
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1598425237654-4fb95c25a072?q=80&w=2000&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('/images/color_management.jpg')" }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary)]/80 lg:to-transparent"></div>
       </div>

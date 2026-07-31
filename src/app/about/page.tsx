@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] flex items-center justify-center">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1598425237654-4fb95c25a072?q=80&w=2000&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('/images/heidelberg.jpg')" }}
         >
           <div className="absolute inset-0 bg-[var(--color-primary)]/80"></div>
         </div>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <div className="w-full lg:w-1/2">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop" 
+                  src="/images/color_management.jpg" 
                   alt="Về Quang Minh Print & Pack" 
                   className="rounded-2xl shadow-2xl relative z-10"
                 />
@@ -125,6 +125,42 @@ export default function AboutPage() {
                 <strong>Sáng tạo:</strong> Không ngừng cải tiến công nghệ.<br/>
                 <strong>Trách nhiệm:</strong> Tận tâm với mọi đơn hàng.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Image Gallery */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Cơ Sở Vật Chất</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-main)] mb-6 uppercase font-saira">
+              Hình Ảnh <span className="text-[var(--color-primary)]">Nhà Máy</span>
+            </h2>
+            <p className="text-[var(--color-text-muted)] max-w-3xl mx-auto text-lg leading-relaxed">
+              Chiêm ngưỡng dây chuyền sản xuất khép kín và hệ thống máy móc nhập khẩu nguyên chiếc tại KCN Quang Minh của chúng tôi.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/heidelberg.jpg" alt="Nhà máy tổng quan" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/bobst.jpg" alt="Dây chuyền máy móc" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/ink.jpg" alt="Máy in Offset" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/color_management.jpg" alt="Khu vực kho xưởng" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/color_management.jpg" alt="Vật tư ngành in" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
+              <img src="/images/paper_rolls.jpg" alt="Khu vực đóng gói giấy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
           </div>
         </div>

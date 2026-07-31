@@ -2,27 +2,27 @@ export default function ProcessSection() {
   const steps = [
     {
       step: "01",
-      title: "Tiếp nhận & Tư vấn",
-      desc: "Lắng nghe yêu cầu, định hướng thiết kế và tư vấn loại vật liệu, máy móc tối ưu nhất phù hợp với ngân sách của doanh nghiệp.",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=400&auto=format&fit=crop"
+      title: "Thiết Kế & Báo Giá",
+      desc: "Tiếp nhận yêu cầu, tư vấn giải pháp vật liệu tối ưu và thiết kế cấu trúc bao bì.",
+      image: "/images/color_management.jpg"
     },
     {
       step: "02",
-      title: "Làm mẫu Mockup",
-      desc: "Thiết kế file in chuẩn hóa, xuất kẽm CTP và in thử (Proof) hoặc làm mẫu túi/hộp thực tế để duyệt trước khi sản xuất hàng loạt.",
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=400&auto=format&fit=crop"
+      title: "In Thử & Duyệt Màu",
+      desc: "In mẫu thực tế, kiểm tra cấu trúc và ký duyệt màu sắc trước khi sản xuất hàng loạt.",
+      image: "/images/color_management.jpg"
     },
     {
       step: "03",
-      title: "Sản xuất đồng bộ",
-      desc: "Tiến hành in ấn trên dây chuyền Offset, phủ UV, bế dán hoàn thiện với sự giám sát khắt khe trên từng công đoạn.",
-      image: "https://images.unsplash.com/photo-1586940866597-226685416035?q=80&w=400&auto=format&fit=crop"
+      title: "Sản Xuất Đồng Loạt",
+      desc: "Đưa vào hệ thống máy in Offset công nghiệp và dây chuyền gia công tự động tốc độ cao.",
+      image: "/images/heidelberg.jpg"
     },
     {
       step: "04",
-      title: "KCS & Giao hàng",
-      desc: "Đội ngũ KCS kiểm tra 100% thành phẩm, loại bỏ phế phẩm, đóng thùng carton tiêu chuẩn và giao tận kho khách hàng.",
-      image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=400&auto=format&fit=crop"
+      title: "Kiểm Tra & Giao Hàng",
+      desc: "Phòng QC kiểm tra 100% sản phẩm đạt tiêu chuẩn trước khi đóng gói và vận chuyển.",
+      image: "/images/paper_rolls.jpg"
     }
   ];
 

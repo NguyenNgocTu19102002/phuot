@@ -1,30 +1,33 @@
 import type { Metadata } from "next";
+import { Inter, Saira } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
+
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const saira = Saira({ subsets: ["latin"], variable: '--font-saira' });
 
 export const metadata: Metadata = {
-  title: "Quang Minh Print & Pack — Nhà máy In Ấn & Bao Bì",
-  description: "Công ty sản xuất bao bì giấy, in offset cao cấp tại KCN Quang Minh, Mê Linh, Hà Nội. Ứng dụng quản trị màu sắc tiêu chuẩn G7.",
-  keywords: "in ấn, bao bì, hộp cứng, tem nhãn, G7 Master, KCN Quang Minh, Mê Linh, Quang Minh Print",
-  openGraph: {
-    title: "Quang Minh Print & Pack",
-    description: "Nhà máy sản xuất bao bì giấy tại KCN Quang Minh",
-    type: "website",
-  },
+  title: "Quang Minh Print & Pack",
+  description: "Giải pháp thiết kế và in ấn chuyên nghiệp tại miền Bắc",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="vi">
-      <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.variable} ${saira.variable} font-sans flex flex-col min-h-screen text-[var(--color-text-main)]`}>
+        <CartProvider>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

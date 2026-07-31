@@ -4,7 +4,7 @@ export default function ContactSection() {
       <div className="flex flex-wrap items-stretch">
         <div className="w-full lg:w-1/2 hidden lg:block">
           <img 
-            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop" 
+            src="/images/heidelberg.jpg" 
             alt="Yêu cầu báo giá in ấn" 
             className="w-full h-full object-cover"
           />

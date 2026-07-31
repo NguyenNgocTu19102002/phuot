@@ -1,33 +1,33 @@
 import Link from "next/link";
-import { ArrowRight, Package, Printer, Tag, Palette } from "lucide-react";
+import { ArrowRight, Package, Printer, Tag, Palette, Droplets } from "lucide-react";
 
 const services = [
   {
-    title: "In Bao Bì Giấy Cao Cấp",
-    description: "Giải pháp bao bì carton, hộp cứng cao cấp bảo vệ sản phẩm và nâng tầm thương hiệu với công nghệ in offset tiên tiến.",
-    icon: <Package size={32} className="text-[var(--color-primary)]" />,
-    image: "https://images.unsplash.com/photo-1605371924599-2d0365da26f5?q=80&w=800&auto=format&fit=crop",
+    title: "Sản Xuất Bao Bì Giấy",
+    description: "Hộp cứng cao cấp, hộp sóng bồi, hộp mỹ phẩm, thực phẩm với công nghệ bế dán tự động.",
+    icon: <Package size={40} strokeWidth={1.5} className="text-[var(--color-primary)]" />,
+    image: "/images/bobst.jpg",
     link: "/services"
   },
   {
     title: "In Ấn Thương Mại",
-    description: "In catalogue, brochure, tờ rơi quảng cáo với màu sắc chuẩn xác 99% theo tiêu chuẩn quốc tế Fogra, gia công sắc nét.",
-    icon: <Printer size={32} className="text-[var(--color-primary)]" />,
-    image: "https://images.unsplash.com/photo-1562664377-709f2c337eb2?q=80&w=800&auto=format&fit=crop",
+    description: "In catalogue, tạp chí, lịch tết, tờ rơi với hệ thống máy in offset 4-6 màu công nghệ mới nhất.",
+    icon: <Printer size={40} strokeWidth={1.5} className="text-[var(--color-primary)]" />,
+    image: "/images/heidelberg.jpg",
     link: "/services"
   },
   {
-    title: "In Tem Nhãn & Decal Cuộn",
-    description: "Cung cấp tem nhãn decal cuộn, decal nhựa, tem bảo hành chống giả số lượng lớn phục vụ ngành thực phẩm, dược phẩm.",
-    icon: <Tag size={32} className="text-[var(--color-primary)]" />,
-    image: "https://images.unsplash.com/photo-1586940866597-226685416035?q=80&w=800&auto=format&fit=crop",
+    title: "Cung Cấp Vật Tư",
+    description: "Nhà phân phối mực in DIC, kẽm CTP Kodak, giấy Ivory/Couche và hóa chất ngành in chuẩn ISO.",
+    icon: <Droplets size={40} strokeWidth={1.5} className="text-[var(--color-primary)]" />,
+    image: "/images/ink.jpg",
     link: "/services"
   },
   {
-    title: "Tư Vấn & Thiết Kế Bao Bì",
-    description: "Lên ý tưởng thiết kế 3D, làm mẫu (mockup) thực tế, kiểm tra cấu trúc chịu lực trước khi đưa vào sản xuất hàng loạt.",
-    icon: <Palette size={32} className="text-[var(--color-primary)]" />,
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop",
+    title: "Quản Trị Màu Sắc",
+    description: "Tư vấn và thiết lập hệ thống ICC Profile, cân chỉnh màu sắc máy in đạt chuẩn Fogra & G7.",
+    icon: <Palette size={40} strokeWidth={1.5} className="text-[var(--color-primary)]" />,
+    image: "/images/color_management.jpg",
     link: "/services"
   }
 ];
