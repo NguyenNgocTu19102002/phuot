@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, Target, Shield, Zap, Award, CheckCircle2 } from "lucide-react";
+import { ChevronRight, Target, Shield, Award, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Giới Thiệu | Quang Minh Print & Pack",
-  description: "Tìm hiểu về công ty Quang Minh Print & Pack - Đối tác in ấn và sản xuất bao bì giấy chuyên nghiệp, uy tín hàng đầu miền Bắc.",
+  title: "Giới Thiệu",
+  description: "Tìm hiểu về chuyên gia G7+ Bùi Minh Tuấn và sứ mệnh chuẩn hóa chất lượng ngành in ấn bao bì tại Việt Nam thông qua ứng dụng ColorMatch.",
 };
 
 export default function AboutPage() {
@@ -14,14 +14,14 @@ export default function AboutPage() {
       <section className="relative h-[50vh] flex items-center justify-center">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/heidelberg.jpg')" }}
+          style={{ backgroundImage: "url('/images/news_g7_certification.jpg')" }}
         >
           <div className="absolute inset-0 bg-[var(--color-primary)]/80"></div>
         </div>
         
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white uppercase font-saira mb-4 tracking-wide">
-            Về Chúng Tôi
+            Về Chuyên Gia G7+
           </h1>
           <div className="flex items-center justify-center gap-2 text-sm text-white/80 font-bold uppercase tracking-wider">
             <Link href="/" className="hover:text-white transition-colors">Trang chủ</Link>
@@ -31,59 +31,65 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section className="py-20 lg:py-24">
+      {/* Main Content */}
+      <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2">
+          <div className="flex flex-wrap items-center -mx-4 lg:-mx-8">
+            <div className="w-full lg:w-1/2 px-4 lg:px-8 mb-12 lg:mb-0">
               <div className="relative">
-                <img 
-                  src="/images/color_management.jpg" 
-                  alt="Về Quang Minh Print & Pack" 
-                  className="rounded-2xl shadow-2xl relative z-10"
+                <div className="absolute -inset-4 bg-gray-100 rounded-2xl transform -rotate-2 z-0"></div>
+                <img
+                  src="/images/heidelberg.jpg"
+                  alt="Cân chỉnh màu trên máy in offset tại nhà máy đối tác"
+                  className="relative z-10 w-full rounded-2xl shadow-2xl border-4 border-white"
                 />
-                <div className="absolute -bottom-8 -right-8 bg-[var(--color-primary)] text-white p-8 rounded-2xl shadow-xl z-20 hidden md:block border-4 border-white">
-                  <div className="text-5xl font-bold font-saira mb-2">15+</div>
-                  <div className="text-sm font-bold uppercase tracking-wider">Năm kinh nghiệm<br/>sản xuất bao bì</div>
+                <div className="absolute -bottom-8 -right-8 bg-[var(--color-primary)] text-white p-6 rounded-xl shadow-xl z-20 hidden md:block">
+                  <div className="text-5xl font-bold mb-1 font-saira">1998</div>
+                  <div className="text-sm font-bold uppercase tracking-wider">Gắn Bó<br/>Ngành In Từ</div>
                 </div>
               </div>
             </div>
             
-            <div className="w-full lg:w-1/2">
-              <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Quang Minh Print & Pack</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-main)] mb-6 uppercase font-saira leading-tight">
-                Đối tác in ấn <span className="text-[var(--color-primary)]">chiến lược</span> của doanh nghiệp
+            <div className="w-full lg:w-1/2 px-4 lg:px-8">
+              <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Xin chào, tôi là</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-main)] mb-8 uppercase font-saira leading-tight">
+                Bùi Minh Tuấn <br/>
+                <span className="text-2xl text-gray-500 capitalize normal-case font-sans mt-2 block">Chuyên gia G7+ Master Colorspace</span>
               </h2>
-              <div className="text-lg text-[var(--color-text-muted)] space-y-6 leading-relaxed mb-8">
+              
+              <div className="prose prose-lg max-w-none text-[var(--color-text-muted)] mb-10">
                 <p>
-                  Được thành lập từ năm 2010, Quang Minh Print & Pack tự hào là một trong những nhà máy sản xuất bao bì giấy và in ấn thương mại quy mô lớn, hiện đại hàng đầu khu vực miền Bắc.
+                  Tôi xuất thân làm nghề chế bản và in ấn từ tháng <strong>12.1998</strong>. Trải qua quá trình dài gắn bó với ngành in tại Hà Nội, đến tháng 12.2013, tôi gia nhập Công ty Bao Bì Sông Lam và gắn bó với vai trò quản lý xưởng in, chế bản và hoàn thiện sản phẩm.
                 </p>
                 <p>
-                  Khác biệt với các nhà in truyền thống, chúng tôi áp dụng triệt để hệ thống quản lý chất lượng ISO 9001:2015 và tiêu chuẩn quản trị màu sắc quốc tế Fogra/G7 vào dây chuyền sản xuất. Chúng tôi không chỉ cung cấp bản in, chúng tôi cung cấp <strong>giải pháp bảo vệ sản phẩm và nâng tầm thương hiệu</strong>.
+                  Vào tháng <strong>09.2019</strong>, tôi vinh dự trở thành Chuyên gia G7 được chứng nhận quốc tế. Với hơn một thập kỷ phụ trách kỹ thuật, tôi hiểu rất rõ <strong>những khó khăn, vướng mắc thực tế</strong> mà các nhà máy in tại Việt Nam thường xuyên gặp phải trong quá trình sản xuất đồng bộ và áp dụng tiêu chuẩn G7.
+                </p>
+                <p>
+                  Để giải quyết triệt để vấn đề đó, vào tháng <strong>10.2024</strong>, tôi đã phát triển thành công ứng dụng <strong>Gray Balance Calculation Tool</strong> (ColorMatch App). Đây là công cụ đột phá được xuất bản trên App Store của Apple nhằm giúp các nhà in vượt qua “nút thắt cổ chai” khi làm chuẩn màu G7.
                 </p>
               </div>
               
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 size={24} className="text-[var(--color-primary)] shrink-0" />
-                  <span className="font-bold text-[var(--color-text-main)]">Hệ thống máy in offset nhập khẩu Đức</span>
+                  <span className="font-bold text-[var(--color-text-main)]">Gắn bó ngành in từ 1998</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 size={24} className="text-[var(--color-primary)] shrink-0" />
-                  <span className="font-bold text-[var(--color-text-main)]">Đội ngũ 350+ kỹ sư, công nhân viên lành nghề</span>
+                  <span className="font-bold text-[var(--color-text-main)]">Chuyên gia G7 quốc tế (Từ 09.2019)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 size={24} className="text-[var(--color-primary)] shrink-0" />
-                  <span className="font-bold text-[var(--color-text-main)]">Nguyên vật liệu chuẩn FSC bảo vệ môi trường</span>
+                  <span className="font-bold text-[var(--color-text-main)]">Nhà phát triển ColorMatch App</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 size={24} className="text-[var(--color-primary)] shrink-0" />
-                  <span className="font-bold text-[var(--color-text-main)]">Năng lực sản xuất 1 triệu sản phẩm/tháng</span>
+                  <span className="font-bold text-[var(--color-text-main)]">Tư vấn thành công 50+ nhà máy</span>
                 </li>
               </ul>
               
               <Link href="/contact" className="inline-block bg-[#ff5e14] text-white font-bold uppercase tracking-wider text-sm py-4 px-10 rounded hover:bg-[#e0500e] transition-colors shadow-lg">
-                Tư vấn ngay
+                Kết nối với tôi
               </Link>
             </div>
           </div>
@@ -100,7 +106,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold font-saira uppercase mb-4 text-[var(--color-text-main)]">Tầm Nhìn</h3>
               <p className="text-[var(--color-text-muted)] leading-relaxed">
-                Trở thành nhà cung cấp giải pháp bao bì giấy toàn diện hàng đầu Đông Nam Á, tiên phong ứng dụng công nghệ in ấn xanh và vật liệu thân thiện với môi trường vào năm 2030.
+                Đưa ngành công nghiệp in ấn bao bì Việt Nam vươn tầm quốc tế thông qua việc chuẩn hóa 100% hệ thống quản trị màu sắc tại các nhà máy lớn.
               </p>
             </div>
             
@@ -110,7 +116,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold font-saira uppercase mb-4 text-[var(--color-text-main)]">Sứ Mệnh</h3>
               <p className="text-[var(--color-text-muted)] leading-relaxed">
-                Mang đến những sản phẩm bao bì hoàn hảo, giúp bảo vệ tối đa giá trị sản phẩm bên trong và tôn vinh thiết kế thương hiệu của đối tác trên thị trường trong nước cũng như quốc tế.
+                Giúp các nhà in tiết kiệm vật tư, thời gian canh bài và nâng cao năng lực cạnh tranh bằng cách làm chủ kỹ thuật cân bằng xám G7 thông qua ColorMatch.
               </p>
             </div>
             
@@ -120,48 +126,42 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold font-saira uppercase mb-4 text-[var(--color-text-main)]">Giá Trị Cốt Lõi</h3>
               <p className="text-[var(--color-text-muted)] leading-relaxed">
-                <strong>Chất lượng:</strong> Chuẩn xác trên từng bản in.<br/>
-                <strong>Tốc độ:</strong> Giao hàng đúng cam kết.<br/>
-                <strong>Sáng tạo:</strong> Không ngừng cải tiến công nghệ.<br/>
-                <strong>Trách nhiệm:</strong> Tận tâm với mọi đơn hàng.
+                <strong>Thực tiễn:</strong> Giải quyết đúng nỗi đau của xưởng.<br/>
+                <strong>Công nghệ:</strong> Áp dụng số hóa (App) vào in ấn.<br/>
+                <strong>Tận tâm:</strong> Đồng hành dài hạn cùng đối tác.<br/>
+                <strong>Tiêu chuẩn:</strong> Bám sát chuẩn Idealliance.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Factory Image Gallery */}
+      {/* Gallery */}
       <section className="py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Cơ Sở Vật Chất</span>
+            <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Hành Trình Chinh Phục G7</span>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text-main)] mb-6 uppercase font-saira">
-              Hình Ảnh <span className="text-[var(--color-primary)]">Nhà Máy</span>
+              Hình ảnh <span className="text-[var(--color-primary)]">Đào Tạo</span>
             </h2>
             <p className="text-[var(--color-text-muted)] max-w-3xl mx-auto text-lg leading-relaxed">
-              Chiêm ngưỡng dây chuyền sản xuất khép kín và hệ thống máy móc nhập khẩu nguyên chiếc tại KCN Quang Minh của chúng tôi.
+              Các khóa huấn luyện, đo kiểm và cân chỉnh ICC Profile trực tiếp tại xưởng in của các đối tác lớn.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/heidelberg.jpg" alt="Nhà máy tổng quan" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/bobst.jpg" alt="Dây chuyền máy móc" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/ink.jpg" alt="Máy in Offset" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/color_management.jpg" alt="Khu vực kho xưởng" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/color_management.jpg" alt="Vật tư ngành in" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="overflow-hidden rounded-xl h-64 shadow-md group">
-              <img src="/images/paper_rolls.jpg" alt="Khu vực đóng gói giấy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
+            {[
+              { src: "/images/news_g7_certification.jpg", alt: "Đo bảng kiểm tra G7 bằng máy quang phổ" },
+              { src: "/images/g7_certification.jpg", alt: "Phòng lab kiểm tra màu theo chuẩn D50" },
+              { src: "/images/news_fogra_standard.jpg", alt: "Kiểm tra bài in trên bàn soi chuẩn" },
+              { src: "/images/news_color_profile.jpg", alt: "Phân tích ICC Profile và gamut màu" },
+              { src: "/images/ink.jpg", alt: "Kiểm soát mực in CMYK tại xưởng" },
+              { src: "/images/bobst.jpg", alt: "Dây chuyền gia công sau in tại nhà máy bao bì" },
+            ].map((img) => (
+              <div key={img.src} className="overflow-hidden rounded-xl h-64 shadow-md group">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              </div>
+            ))}
           </div>
         </div>
       </section>

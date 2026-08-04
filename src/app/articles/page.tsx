@@ -4,8 +4,8 @@ import { ChevronRight, ArrowRight, Calendar, User } from "lucide-react";
 import { articles } from "@/data/articles";
 
 export const metadata: Metadata = {
-  title: "Tin Tức & Kiến Thức In Ấn | Quang Minh Print & Pack",
-  description: "Cập nhật các tin tức chuyên ngành, kiến thức in ấn, công nghệ bao bì và quản trị màu sắc mới nhất.",
+  title: "Tin Tức & Kiến Thức In Ấn",
+  description: "Kiến thức chuyên sâu về G7, cân bằng xám, ICC Profile, tiêu chuẩn ISO 12647 và quản trị màu sắc trong ngành in.",
 };
 
 export default function ArticlesPage() {
@@ -42,7 +42,7 @@ export default function ArticlesPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                   <div className="absolute top-4 left-4 bg-[var(--color-primary)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-md">
-                    Kiến thức
+                    {article.categoryLabel}
                   </div>
                 </Link>
               </div>

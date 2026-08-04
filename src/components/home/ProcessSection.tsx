@@ -2,27 +2,27 @@ export default function ProcessSection() {
   const steps = [
     {
       step: "01",
-      title: "Thiết Kế & Báo Giá",
-      desc: "Tiếp nhận yêu cầu, tư vấn giải pháp vật liệu tối ưu và thiết kế cấu trúc bao bì.",
-      image: "/images/color_management.jpg"
-    },
-    {
-      step: "02",
-      title: "In Thử & Duyệt Màu",
-      desc: "In mẫu thực tế, kiểm tra cấu trúc và ký duyệt màu sắc trước khi sản xuất hàng loạt.",
-      image: "/images/color_management.jpg"
-    },
-    {
-      step: "03",
-      title: "Sản Xuất Đồng Loạt",
-      desc: "Đưa vào hệ thống máy in Offset công nghiệp và dây chuyền gia công tự động tốc độ cao.",
+      title: "Khảo Sát & Đánh Giá",
+      desc: "Chuyên gia đến nhà máy khảo sát thiết bị, vật tư, mực và năng lực in hiện tại để lên kế hoạch cân chỉnh.",
       image: "/images/heidelberg.jpg"
     },
     {
+      step: "02",
+      title: "Đào Tạo Nhân Sự",
+      desc: "Mở lớp huấn luyện thực tế cho đội ngũ thợ in, QC, chế bản về lý thuyết quản trị màu và phương pháp G7.",
+      image: "/images/g7_certification.jpg"
+    },
+    {
+      step: "03",
+      title: "Thực Hành Cân Chỉnh",
+      desc: "Trực tiếp tiến hành in test P2P, đo màu, dùng ColorMatch App để thiết lập đường cong bù trừ (NPDC).",
+      image: "/images/ink.jpg"
+    },
+    {
       step: "04",
-      title: "Kiểm Tra & Giao Hàng",
-      desc: "Phòng QC kiểm tra 100% sản phẩm đạt tiêu chuẩn trước khi đóng gói và vận chuyển.",
-      image: "/images/paper_rolls.jpg"
+      title: "Cấp Chứng Chỉ G7",
+      desc: "Gửi kết quả in thực tế cho tổ chức Idealliance để xét duyệt và cấp chứng nhận G7 Master Colorspace toàn cầu.",
+      image: "/images/news_fogra_standard.jpg"
     }
   ];
 
@@ -30,12 +30,12 @@ export default function ProcessSection() {
     <section className="py-20 bg-[#f4f7f6] relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Chuyên Nghiệp Hóa</span>
+          <span className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">Đồng Hành Toàn Diện</span>
           <h3 className="text-4xl md:text-5xl font-bold font-saira uppercase text-[var(--color-text-main)] mb-6">
-            Quy trình làm việc
+            Lộ Trình Đạt Chứng Chỉ G7
           </h3>
           <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Mọi khâu từ lúc nhận yêu cầu đến khi ra thành phẩm đều được chuẩn hóa qua quy trình khép kín 4 bước, đảm bảo chất lượng cao nhất và tiến độ nhanh nhất.
+            Chúng tôi thiết kế một lộ trình rõ ràng gồm 4 bước chuyên biệt, giúp nhà máy in của bạn làm chủ phương pháp luận và vượt qua kỳ kiểm định G7 Master một cách nhanh chóng và tiết kiệm nhất.
           </p>
         </div>
 

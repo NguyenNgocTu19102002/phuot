@@ -16,39 +16,39 @@ export default function WhyChooseUs() {
           <div className="w-full lg:w-7/12">
             <div className="bg-[var(--color-primary)] bg-opacity-95 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm border border-white/10">
               <h3 className="text-3xl lg:text-4xl font-bold font-saira uppercase mb-6 leading-tight">
-                Tại sao nên chọn Quang Minh Print & Pack?
+                Tại sao chọn COLORMATCH VIETNAM?
               </h3>
               <p className="text-lg mb-10 text-white/90 leading-relaxed">
-                Chúng tôi không chỉ là nhà cung cấp in ấn, chúng tôi là đối tác chiến lược giúp nâng tầm hình ảnh thương hiệu của bạn thông qua những giải pháp bao bì đột phá và thiết bị ngành in tối ưu.
+                Chúng tôi là đơn vị tiên phong và uy tín hàng đầu tại Việt Nam trong lĩnh vực đào tạo, tư vấn và cấp chứng nhận G7 Master Colorspace cho các nhà máy in công nghiệp.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={28} className="text-white mt-1 shrink-0 opacity-90" />
                   <div>
-                    <h4 className="font-bold text-xl mb-2">Dây chuyền chuẩn quốc tế</h4>
-                    <p className="text-white/80 text-sm leading-relaxed">Hệ thống máy in offset nhập khẩu Đức, kiểm soát màu sắc chuẩn Fogra/G7 đạt độ chính xác 99%.</p>
+                    <h4 className="font-bold text-xl mb-2">Chuyên gia G7+ Hàng Đầu</h4>
+                    <p className="text-white/80 text-sm leading-relaxed">Được trực tiếp dẫn dắt bởi Mr. Bùi Minh Tuấn - Chuyên gia G7+ được chứng nhận từ năm 2019 với kinh nghiệm làm nghề từ 1998.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={28} className="text-white mt-1 shrink-0 opacity-90" />
                   <div>
-                    <h4 className="font-bold text-xl mb-2">Năng lực sản xuất lớn</h4>
-                    <p className="text-white/80 text-sm leading-relaxed">Nhà máy quy mô lớn có khả năng đáp ứng các đơn hàng từ 10.000 đến 1.000.000 sản phẩm mỗi tháng.</p>
+                    <h4 className="font-bold text-xl mb-2">ColorMatch App Độc Quyền</h4>
+                    <p className="text-white/80 text-sm leading-relaxed">Sở hữu ứng dụng Gray Balance Calculation Tool trên App Store giúp giải quyết triệt để nút thắt khi áp dụng G7 tại Việt Nam.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={28} className="text-white mt-1 shrink-0 opacity-90" />
                   <div>
-                    <h4 className="font-bold text-xl mb-2">Giá thành cạnh tranh</h4>
-                    <p className="text-white/80 text-sm leading-relaxed">Sản xuất trực tiếp không qua trung gian, tự chủ nguồn nguyên vật liệu giúp tối ưu ngân sách tối đa.</p>
+                    <h4 className="font-bold text-xl mb-2">Kinh Nghiệm Thực Chiến</h4>
+                    <p className="text-white/80 text-sm leading-relaxed">Không chỉ dạy lý thuyết, chúng tôi đã trực tiếp cân chỉnh và giúp hơn 50+ nhà in đạt chứng nhận G7 Master thành công.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 size={28} className="text-white mt-1 shrink-0 opacity-90" />
                   <div>
-                    <h4 className="font-bold text-xl mb-2">Bảo mật thiết kế tuyệt đối</h4>
-                    <p className="text-white/80 text-sm leading-relaxed">Ký kết NDA, cam kết bảo hộ quyền sở hữu trí tuệ mẫu mã độc quyền của mọi khách hàng doanh nghiệp.</p>
+                    <h4 className="font-bold text-xl mb-2">Đồng Hành Dài Hạn</h4>
+                    <p className="text-white/80 text-sm leading-relaxed">Hỗ trợ kỹ thuật 24/7, đánh giá audit định kỳ giúp duy trì chứng chỉ G7 và sự ổn định màu sắc lâu dài cho nhà máy.</p>
                   </div>
                 </div>
               </div>

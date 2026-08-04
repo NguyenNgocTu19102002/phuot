@@ -11,11 +11,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-[var(--color-primary)] rounded flex items-center justify-center text-white font-bold text-xl">
-                QM
+                CM
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white uppercase tracking-tight leading-none">Quang Minh</span>
-                <span className="text-sm font-semibold text-gray-400 uppercase tracking-widest leading-none mt-1">Print & Pack</span>
+                <span className="text-xl font-bold text-white tracking-tight leading-none uppercase">COLORMATCH</span>
+                <span className="text-sm font-bold text-gray-400 tracking-widest leading-none mt-1 uppercase">VIETNAM</span>
               </div>
             </Link>
             <p className="text-gray-400 leading-relaxed mb-6">
@@ -33,7 +33,8 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 uppercase tracking-wider">Điều Hướng</h4>
             <ul className="space-y-4">
               <li><Link href="/about" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Giới Thiệu</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Dịch Vụ Tư Vấn</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Dịch Vụ G7</Link></li>
+              <li><Link href="/courses" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Khóa Học & Công Cụ</Link></li>
               <li><Link href="/articles" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Tin Tức</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">Liên Hệ</Link></li>
             </ul>

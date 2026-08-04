@@ -1,47 +1,86 @@
 export const company = {
-  name: "Công ty TNHH Bao Bì & In Ấn Quang Minh",
-  shortName: "Quang Minh Print & Pack",
-  slogan: "Chất Lượng In Ấn Chuẩn Quốc Tế G7",
+  name: "Công ty Tư vấn Đào tạo & Giải pháp In ấn COLORMATCH VIETNAM",
+  shortName: "COLORMATCH VIETNAM",
+  slogan: "Chuyên gia đào tạo G7 & Cân chỉnh màu sắc",
   description:
-    "Quang Minh Print & Pack là nhà máy chuyên cung cấp các giải pháp in ấn và sản xuất bao bì giấy cao cấp. Sở hữu dây chuyền hiện đại tại KCN Quang Minh và áp dụng nghiêm ngặt các tiêu chuẩn quản trị màu sắc quốc tế như G7, Fogra, chúng tôi cam kết mang đến sự đồng nhất và hoàn hảo trên từng sản phẩm.",
-  address: "Lô 12, Khu Công nghiệp Quang Minh, Thị trấn Quang Minh, Huyện Mê Linh, TP. Hà Nội",
-  phone: "024 3818 6666",
-  email: "contact@quangminhpack.vn",
+    "COLORMATCH VIETNAM được sáng lập và điều hành bởi Chuyên gia G7+ Bùi Minh Tuấn. Chúng tôi chuyên tư vấn, đào tạo nhân sự nhà in, triển khai cân chỉnh màu sắc máy in và hỗ trợ các nhà in đạt chứng nhận G7 Master Colorspace của Idealliance.",
+  address: "Hà Nội, Việt Nam",
+  phone: "086.987.81.89",
+  email: "tuang7plus@colormatch.vn",
   social: {
-    facebook: "https://facebook.com/quangminhpack",
-    linkedin: "https://linkedin.com/company/quangminhpack",
-    youtube: "https://youtube.com/quangminhpack"
+    facebook: "https://facebook.com/colormatchvietnam",
+    linkedin: "https://linkedin.com/company/colormatchvietnam",
+    youtube: "https://youtube.com/colormatchvietnam"
   },
   stats: [
-    { label: "Năm Thành Lập", value: "2010" },
-    { label: "Chứng Nhận G7 Master", value: "2020" },
-    { label: "Nhân Sự Chuyên Môn", value: "350+" },
-    { label: "Đối Tác Toàn Cầu", value: "500+" }
+    { value: "1998", label: "Gắn bó ngành in từ" },
+    { value: "2019", label: "Chuyên gia G7 quốc tế từ" },
+    { value: "50+", label: "Nhà in đã đào tạo" },
+    { value: "100+", label: "Máy in đã cân chỉnh" }
   ],
   services: [
     {
       id: "s1",
-      title: "Sản Xuất Bao Bì Giấy Cao Cấp",
-      desc: "Thiết kế và in ấn các loại hộp cứng, hộp carton sóng, túi giấy cao cấp phục vụ cho các ngành mỹ phẩm, dược phẩm, thực phẩm và điện tử.",
-      icon: "Award"
+      title: "Đào Tạo Chứng Chỉ G7",
+      desc: "Chương trình đào tạo chuyên sâu về phương pháp G7 và lộ trình lấy chứng chỉ Master Colorspace cho nhà in.",
+      icon: "Award",
+      image: "/images/news_g7_certification.jpg",
+      points: [
+        "Lý thuyết cân bằng xám & NPDC",
+        "Thực hành đo màu trên máy thật",
+        "Ôn luyện kỳ thi G7 Expert"
+      ]
     },
     {
       id: "s2",
-      title: "In Offset Công Nghiệp",
-      desc: "Hệ thống máy in Offset công nghệ cao đáp ứng các đơn hàng số lượng lớn với độ chính xác màu tuyệt đối, tuân thủ tiêu chuẩn ISO 12647.",
-      icon: "Settings"
+      title: "Cân Chỉnh Máy In",
+      desc: "Cân chỉnh, thiết lập ICC Profile cho các hệ thống máy in Offset, Flexo, Digital đạt chuẩn ISO 12647.",
+      icon: "Settings",
+      image: "/images/heidelberg.jpg",
+      points: [
+        "In test & đo đạc dữ liệu P2P",
+        "Dựng đường cong bù trừ CTP",
+        "Nghiệm thu ΔE theo chuẩn"
+      ]
     },
     {
       id: "s3",
-      title: "Quản Trị Màu Sắc Chuyên Nghiệp",
-      desc: "Ứng dụng phương pháp G7 để kiểm soát cân bằng xám và phục chế tầng thứ (NPDC), đảm bảo sự đồng nhất thị giác trên mọi vật liệu.",
-      icon: "Palette"
+      title: "Giải Pháp ColorMatch App",
+      desc: "Ứng dụng Gray Balance Calculation Tool trên App Store giúp giải quyết nút thắt trong việc áp dụng G7.",
+      icon: "Palette",
+      image: "/images/color_management.jpg",
+      points: [
+        "Tính NPDC tự động",
+        "Xuất đường cong bù trừ",
+        "Lưu lịch sử theo từng máy"
+      ]
     },
     {
       id: "s4",
-      title: "In Tem Nhãn, Decal",
-      desc: "In ấn tem nhãn cuộn, decal bế khuôn chất lượng cao, phục vụ đóng gói và truy xuất nguồn gốc sản phẩm an toàn.",
-      icon: "BookOpen"
+      title: "Tư Vấn Kỹ Thuật In",
+      desc: "Tư vấn thiết lập phòng QC, đánh giá hệ thống quản trị màu sắc, kiểm tra sai lệch màu in.",
+      icon: "BookOpen",
+      image: "/images/g7_certification.jpg",
+      points: [
+        "Chuẩn hóa phòng sáng D50",
+        "Audit hệ thống quản trị màu",
+        "Xây dựng quy trình QC"
+      ]
+    }
+  ],
+  // 3 cấp độ chứng nhận của Idealliance - dùng cho phần giải thích G7 ở trang chủ
+  g7Levels: [
+    {
+      level: "G7 Grayscale",
+      desc: "Cấp cơ bản. Kiểm soát cân bằng xám và đường cong mật độ trung tính (NPDC) trên trục xám của thiết bị."
+    },
+    {
+      level: "G7 Targeted",
+      desc: "Cấp trung. Ngoài cân bằng xám, các màu mực chủ đạo CMYK phải đạt giá trị Lab mục tiêu theo tiêu chuẩn tham chiếu."
+    },
+    {
+      level: "G7 Colorspace",
+      desc: "Cấp cao nhất. Toàn bộ không gian màu của thiết bị phải khớp với dữ liệu đặc trưng tham chiếu (ISO 12647-2 / CRPC)."
     }
   ]
 };

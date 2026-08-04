@@ -32,7 +32,7 @@ export default function LatestArticles() {
               </div>
               <div className="p-8 bg-[var(--color-secondary)]">
                 <span className="inline-block text-[var(--color-primary)] font-bold uppercase text-xs tracking-wider mb-3">
-                  Tin tức
+                  {article.categoryLabel}
                 </span>
                 <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-0 font-saira uppercase leading-tight line-clamp-2">
                   <Link href={`/articles/${article.slug}`} className="hover:text-[var(--color-primary)] transition-colors">

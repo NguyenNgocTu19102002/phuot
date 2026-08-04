@@ -15,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const article = articles.find((a) => a.slug === resolvedParams.slug);
   return {
-    title: article ? `${article.title} | Quang Minh Print & Pack` : "Bài Viết",
+    title: article ? article.title : "Không tìm thấy bài viết",
+    description: article?.shortDesc,
   };
 }
 
